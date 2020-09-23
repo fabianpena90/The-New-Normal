@@ -19,6 +19,9 @@ function HomePage(props) {
         <li>
             <Link to={`/weather`}>Weather</Link>
         </li>
+        <li>
+            <Link to={`/covid`}>Covid19</Link>
+        </li>
       </ul>
       </nav>
     </div>

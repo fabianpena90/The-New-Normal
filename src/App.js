@@ -5,6 +5,7 @@ import HomePage from './components/HomePage'
 import axios from 'axios';
 import News from './components/News'
 import Weather from './components/Weather'
+import LatestEvents from './components/LatestEvents.js'
 
 
 function App() {
@@ -18,6 +19,17 @@ function App() {
     getNews();    
   }, []);
 
+  const [events, setEvents] = useState([])
+  useEffect(() => {
+    async function getEvents() {
+      const apiKey = 'aGGAu8OcGXyfxtutc5oQRBUOWI0wpc5Z'
+      let res = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=200&apikey=${apiKey}`);
+      console.log(res.data)
+      setEvents(res.data)
+    }
+    getEvents();
+  }, [])
+
  
   return (
     <div className="App">
@@ -26,6 +38,7 @@ function App() {
       <Switch>
           <Route path="/news" render={(props) => <News news={news} {...props} />}></Route>
           <Route path="/weather" render={(props) => <Weather {...props} />}></Route>
+          <Route path="/events" render={(props) => <LatestEvents events={events}{...props} />}></Route>
       </Switch>
     </div>
   );

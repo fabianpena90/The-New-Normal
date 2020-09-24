@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
-import HomePage from './components/HomePage'
 import axios from 'axios';
+
+// Import Components
+import HomePage from './components/HomePage'
 import News from './components/News'
 import Weather from './components/Weather'
 import Events from './components/Events'

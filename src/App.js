@@ -5,6 +5,7 @@ import HomePage from './components/HomePage'
 import axios from 'axios';
 import News from './components/News'
 import Weather from './components/Weather'
+import Events from './components/Events'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Switch>
           <Route path="/news" render={(props) => <News news={news} {...props} />}></Route>
           <Route path="/weather" render={(props) => <Weather {...props} />}></Route>
+          <Route path="/events" render={(props) => <Events {...props} />}></Route>
       </Switch>
     </div>
   );

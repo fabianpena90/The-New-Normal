@@ -13,7 +13,9 @@ function HomePage(props) {
         <li>
             <Link to={`/news`}>News</Link>
         </li>
-       
+        <li>
+            <Link to={`/events`}>Events</Link>
+        </li>
         <li>
             <Link to={`/weather`}>Weather</Link>
         </li>

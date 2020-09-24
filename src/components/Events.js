@@ -8,7 +8,7 @@ function Restaurants() {
     async function getRestaurants(){
       const apiKey = 'aGGAu8OcGXyfxtutc5oQRBUOWI0wpc5Z'
       let res = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=200&apikey=${apiKey}`)
-      console.log(res.data._embedded.events)
+      // console.log(res.data._embedded.events)
       setEvents(res.data._embedded.events)
     }
     getRestaurants()

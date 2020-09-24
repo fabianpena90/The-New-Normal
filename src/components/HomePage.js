@@ -1,31 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import Quotes from "./Quotes";
 
 function HomePage(props) {
   return (
     <div>
       <nav>
-      <ul>
-        <li>
+        <ul>
+          <li>
             <Link to={`/`}>Home</Link>
-        </li>
-        <li>
+          </li>
+          <li>
             <Link to={`/news`}>News</Link>
-        </li>
-        <li>
+          </li>
+          <li>
             <Link to={`/events`}>Events</Link>
-        </li>
-        <li>
+          </li>
+          <li>
             <Link to={`/weather`}>Weather</Link>
-        </li>
-        <li>
+          </li>
+          <li>
             <Link to={`/flight`}>Book a Flight</Link>
-        </li>
-        <li>
+          </li>
+          <li>
             <Link to={`/recipes`}>Cooking Recipes</Link>
-        </li>
-      </ul>
+          </li>
+        </ul>
       </nav>
     </div>
   );

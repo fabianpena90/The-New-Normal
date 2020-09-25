@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../Weather.css'
 
-
+// Bootstrap
+import InputGroup from 'react-bootstrap/InputGroup'
+import FormControl from 'react-bootstrap/FormControl'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 
 function Weather(props) {
 
@@ -26,18 +32,33 @@ function Weather(props) {
   
   return (
     <div>
-      <label for="search">Enter city name: </label>
-      <input onChange={cityName} type="text" name="search" placeholder="City" required="" />
-      <button style={{margin: '0 10px'}} onClick={getWeather}>Submit</button>
-      {toggle ? (
-    <div>
-      <p>{`The wheather in ${weather.name}`}</p>
-      <p>{`The actual tempeture is ${weather.main?.temp}F`}</p> {/* The ? is used for Optional Chaining*/}
-      <p>{`Feels like ${weather.main?.feels_like}F`}</p> {/* The ? is used for Optional Chaining*/}
-      <p>{`${weather.weather[0].description}`}</p> 
-      <p>{weather.weather[0].main}</p> 
-    </div>
-      ): null }
+      <div className="weather">
+        <h1 className="weatherHeader">Weather</h1>
+        <InputGroup size="md">
+          <InputGroup.Prepend>
+            <InputGroup.Text id="inputGroup-sizing-lg">Enter City Name: </InputGroup.Text>
+          </InputGroup.Prepend>
+          <FormControl className="weatherInput" onChange={cityName}  aria-label="Medium" aria-describedby="inputGroup-sizing-sm" />
+          <Button onClick={getWeather} variant="outline-info">Search</Button>
+        </InputGroup>
+      </div>
+      <div>
+        {toggle ? (
+      <div className="weatherData">
+      <Card style={{ width: '25rem', margin: 'auto' }}>
+        <Card.Body>
+          <Card.Title ><h1 className="cardTitle">{weather.name}</h1></Card.Title>
+          <Card.Text>
+            <p className="weather-description">{`The actual tempeture is ${weather.main?.temp}F`}</p> {/* The ? is used for Optional Chaining*/}
+            <p className="weather-description">{`Feels like ${weather.main?.feels_like}F`}</p> {/* The ? is used for Optional Chaining*/}
+            <p className="weather-description">{`${weather.weather[0].description}`}</p> 
+            <p className="weather-description">{weather.weather[0].main}</p> 
+          </Card.Text>
+        </Card.Body>
+      </Card>      
+      </div>
+        ): null }
+      </div>
     </div>
   );
 }

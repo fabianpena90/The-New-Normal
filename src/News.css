@@ -1,6 +1,5 @@
 .newsContainer {
   margin: 60px 0;
-  background-color: #000;
 }
 
 .newsArticle {
@@ -18,4 +17,8 @@
   text-align:center;
   margin: 40px 0 10px 0;
   font-size: 4rem;
+}
+
+.newsTitle {
+  font-weight: bold;
 }

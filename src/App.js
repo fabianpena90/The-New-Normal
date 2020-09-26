@@ -35,7 +35,7 @@ function App() {
     <div className="hero">
 
     {/* Navbar */}
-      <Navbar sticky="top" className="bg-dark align-content-center" expand="lg">
+      <Navbar id="mainNavbar" sticky="top" className="bg-dark align-content-center" expand="lg">
       <Navbar.Brand className="logo" href="/home">The New Normal</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end menu">

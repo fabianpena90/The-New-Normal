@@ -4,12 +4,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("/img/newsmagazine.jpg") no-repeat center center/cover;
-  /* height: 100vh;
-  position: relative;
-  color: #fff; */
-  /* background: url("./img/newsmagazine.jpg") no-repeat center center fixed; */
-  /* background-size: 100vw; */
+  background: #8e9eab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #8e9eab, #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #8e9eab, #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-family: 'Montserrat', sans-serif;
 }
 

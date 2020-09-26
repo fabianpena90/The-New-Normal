@@ -1,3 +1,17 @@
+# The New Normal Informative
+
+Getting news, events, flights, weather, inspirational quotes, cooking recipes by fetching data from different API's.
+
+## Technology
+
+- React JS
+- Bootstrap React
+- React Route Dom
+- Axios
+- HTML
+- CSS
+- API (Open Weather / TicketMaster / NY Times / Quotes Inspirational / Recipes API)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

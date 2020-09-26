@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="hero">
 
     {/* Navbar */}
       <Navbar sticky="top" className="bg-dark align-content-center" expand="lg">

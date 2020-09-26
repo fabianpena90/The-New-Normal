@@ -14,6 +14,7 @@ function News(props) {
     // console.log(news.title)
     return (
       
+      
       <Container className="newsContainer" fluid="md">
         <Row className="justify-content-md-center">
           <Col sm={8}>

@@ -36,10 +36,10 @@ function Weather(props) {
         <h1 className="weatherHeader">Weather</h1>
         <InputGroup size="md">
           <InputGroup.Prepend>
-            <InputGroup.Text id="inputGroup-sizing-lg">Enter City Name: </InputGroup.Text>
+            <InputGroup.Text id="inputGroup-sizing-lg">Enter City: </InputGroup.Text>
           </InputGroup.Prepend>
           <FormControl className="weatherInput" onChange={cityName}  aria-label="Medium" aria-describedby="inputGroup-sizing-sm" />
-          <Button onClick={getWeather} variant="outline-info">Search</Button>
+          <Button onClick={getWeather} variant="info">Search</Button>
         </InputGroup>
       </div>
       <div>

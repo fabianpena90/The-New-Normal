@@ -44,7 +44,7 @@ function App() {
           <Nav.Link href="/news">News</Nav.Link>
           <Nav.Link href="/events">Events</Nav.Link>
           <Nav.Link href="/weather">Weather</Nav.Link>
-          <Nav.Link href="/flight">Book a Flight</Nav.Link>
+          <Nav.Link href="/flight">Search Flights</Nav.Link>
           <Nav.Link href="/recipes">Cooking Recipes</Nav.Link>
         </Nav>
       </Navbar.Collapse>

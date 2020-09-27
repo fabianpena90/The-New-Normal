@@ -1,0 +1,41 @@
+li {
+  list-style-type: none;
+}
+.recipehead {
+  text-align: center;
+  margin: 40px 0 40px 0;
+  font-size: 4rem;
+}
+
+.cardbody {
+  text-align: center;
+  align-items: center;
+}
+
+.foodbtn {
+  border-radius: 10%;
+  color: white;
+  background-color: rgb(23, 165, 190);
+}
+
+.foodresults {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.foodbtn:hover {
+  filter: brightness(80%);
+}
+
+.food {
+  margin: 0 25%;
+}
+
+.linktext {
+  color: white;
+}
+
+.linktext:hover {
+  filter: brightness(280%);
+}

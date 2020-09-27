@@ -1,0 +1,47 @@
+.flightheader {
+  text-align: center;
+  margin: 40px 0 40px 0;
+  font-size: 4rem;
+}
+
+.cityspan {
+  margin-left: 0px;
+  margin-right: 1145px;
+  position: fixed;
+}
+
+.cityinput {
+  margin-left: 108px;
+  height: 33px;
+  margin-top: 3px;
+}
+.cityinput2 {
+  margin-right: 108px;
+  height: 33px;
+  margin-top: 3px;
+}
+
+.citybtn {
+  border-radius: 10%;
+  color: white;
+  background-color: rgb(23, 165, 190);
+}
+
+.citybtn:hover {
+  filter: brightness(80%);
+}
+
+.flightresults {
+  text-align: center;
+  align-items: center;
+}
+
+.flightform {
+  margin: 0 25%;
+}
+
+.flighttable {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}

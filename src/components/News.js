@@ -1,23 +1,63 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../News.css";
+
+// Bootstrap
+import Container from "react-bootstrap/Container";
+import ListGroup from "react-bootstrap/ListGroup";
+
+import ListGroupItem from "react-bootstrap/ListGroupItem";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
+import { Card } from "react-bootstrap";
 
 function News(props) {
-  // console.log(props) 
+  console.log(props);
   let freshNews = props.news.map((news) => {
     // console.log(news.title)
     return (
-      <div>
-        <ul>
-          <h3>{news.title}</h3>
-          <p>{news.abstract}</p>
-          <img style={{width:'400px'}} src={news.multimedia[0].url} alt="News Pics"/>
-          <p><a href={news.short_url} >Read whole article</a></p>
-        </ul>
+      <div className="newscard">
+        <Card style={{ width: "40rem" }}>
+          <Card.Img variant="top" src={news.multimedia[0].url} />
+          <Card.Body>
+            <Card.Title>{news.title}</Card.Title>
+            <Card.Text>{news.abstract}</Card.Text>
+          </Card.Body>
+          <ListGroup className="list-group-flush">
+            <ListGroupItem>{news.byline}</ListGroupItem>
+            <ListGroupItem>{news.item_type}</ListGroupItem>
+            <ListGroupItem>{news.geo_facet[0]}</ListGroupItem>
+          </ListGroup>
+          <Card.Body>
+            <Card.Link href={news.short_url}>Read whole article</Card.Link>
+          </Card.Body>
+        </Card>
       </div>
-    )
-  })
+    );
+    // return (
+    //   <Container className="newsContainer" fluid="md">
+    //     <Row className="justify-content-md-center">
+    //       <Col sm={8}>
+    //         <h2 className="newsTitle">{news.title}</h2>
+    //         <p>{news.abstract}</p>
+    //       </Col>
+    //     </Row>
+    //     <Row className="justify-content-md-center">
+    //       <Col sm={8}>
+    //         {/* <img style={{width:'400px'}} src={news.multimedia[0].url} alt="News Pics"/> */}
+    //         <Image src={news.multimedia[0].url} fluid />
+    //         <p className="newsArticle">
+    //           <a href={news.short_url}>Read whole article</a>
+    //         </p>
+    //       </Col>
+    //     </Row>
+    //   </Container>
+    // );
+  });
   return (
     <div>
+      <h1 className="newsHeader">Latest News</h1>
       {freshNews}
     </div>
   );

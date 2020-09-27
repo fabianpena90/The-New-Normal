@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../Quotes.css";
+
+// Bootstrap
+import Card from "react-bootstrap/Card";
 
 function Quotes() {
   const [quote, setQuote] = useState("");
@@ -30,15 +34,19 @@ function Quotes() {
   }, []);
 
   return (
-    <div>
-      <h1>Get your daily dose of inspiration</h1>
-      <br></br>
-      <br></br>
-      {/* <button onClick={getQuote}>Give me some Inspiration</button> */}
-      <br></br>
-      <br></br>
-      <h2>Author: {author}</h2>
-      <p>{quote}</p>
+    <div className="quotes">
+      <h1 className="quoteHeader">The New Normal Informative</h1>
+      <Card>
+        <Card.Header>Quote</Card.Header>
+        <Card.Body>
+          <blockquote className="blockquote mb-0">
+            <p className="quote"> {quote} </p>
+            <footer className="blockquote-footer">
+              <cite title="Source Title">{author}</cite>
+            </footer>
+          </blockquote>
+        </Card.Body>
+      </Card>
     </div>
   );
 }

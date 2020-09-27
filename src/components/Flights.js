@@ -29,6 +29,7 @@ function Flights(props) {
       })    
   }
 
+  // Function quotes
   function getQuotes() {
     return flights.Quotes?.map((quote) => {
       return (

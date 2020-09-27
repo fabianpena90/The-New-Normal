@@ -13,8 +13,6 @@ function News(props) {
   let freshNews = props.news.map((news) => {
     // console.log(news.title)
     return (
-      
-
       <Container className="newsContainer" fluid="md">
         <Row className="justify-content-md-center">
           <Col sm={8}>
@@ -24,7 +22,6 @@ function News(props) {
         </Row>
         <Row className="justify-content-md-center">
           <Col sm={8}>
-          {/* <img style={{width:'400px'}} src={news.multimedia[0].url} alt="News Pics"/> */}
           <Image src={news.multimedia[0].url} fluid />
           <p className="newsArticle" ><a href={news.short_url} >Read whole article</a></p>
           </Col>

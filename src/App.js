@@ -39,7 +39,7 @@ function App() {
       <Navbar.Brand className="logo" href="/home">The New Normal</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end menu">
-        <Nav className="justify-content-center">
+        <Nav className="justify-content-center" defaultActiveKey="#first">
           <Nav.Link href="/home" >Home</Nav.Link>
           <Nav.Link href="/news">News</Nav.Link>
           <Nav.Link href="/events">Events</Nav.Link>

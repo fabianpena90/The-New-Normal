@@ -4,7 +4,7 @@ import "../Weather.css";
 
 // Bootstrap
 import InputGroup from "react-bootstrap/InputGroup";
-import Table from "react-bootstrap/Table";
+
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";

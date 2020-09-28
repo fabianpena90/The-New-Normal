@@ -11,6 +11,7 @@ import Events from "./components/Events";
 import Flights from "./components/Flights";
 import Recipes from "./components/Recipes";
 import Quotes from "./components/Quotes";
+import Footer from "./components/Footer";
 
 // Bootstrap React
 import Navbar from 'react-bootstrap/Navbar'
@@ -89,6 +90,7 @@ function App() {
           render={(props) => <Recipes {...props} />}
         ></Route>
       </Switch>
+      <Footer />
       </div>
     </div>
   );

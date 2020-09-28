@@ -23,25 +23,6 @@ function News(props) {
         </Card>
       </div>
     );
-    // return (
-    //   <Container className="newsContainer" fluid="md">
-    //     <Row className="justify-content-md-center">
-    //       <Col sm={8}>
-    //         <h2 className="newsTitle">{news.title}</h2>
-    //         <p>{news.abstract}</p>
-    //       </Col>
-    //     </Row>
-    //     <Row className="justify-content-md-center">
-    //       <Col sm={8}>
-    //         {/* <img style={{width:'400px'}} src={news.multimedia[0].url} alt="News Pics"/> */}
-    //         <Image src={news.multimedia[0].url} fluid />
-    //         <p className="newsArticle">
-    //           <a href={news.short_url}>Read whole article</a>
-    //         </p>
-    //       </Col>
-    //     </Row>
-    //   </Container>
-    // );
   });
   return (
     <div>

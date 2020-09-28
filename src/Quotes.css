@@ -9,6 +9,8 @@
 .quoteHeader {
   font-size: 4rem;
   margin-bottom: 60px;
+  font-weight: bold;
+  text-shadow: 7px -4px 1px rgba(146, 150, 150, 0.46);
 }
 
 .blockquote-footer {

@@ -3,15 +3,10 @@ import axios from "axios";
 import "../Flights.css";
 import Table from "react-bootstrap/Table";
 import InputGroup from "react-bootstrap/InputGroup";
-import ListGroup from "react-bootstrap/ListGroup";
 import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
-import { ListGroupItem } from "react-bootstrap";
+
 
 function Flights(props) {
   const [flights, setFlights] = useState([]);
@@ -56,6 +51,7 @@ function Flights(props) {
             <Table variant="dark" striped bordered hover>
               <thead>
                 <tr>
+                  <th>Carrier</th>
                   <th>Price</th>
                   <th>Date</th>
                 </tr>
@@ -63,10 +59,19 @@ function Flights(props) {
               <tbody>
                 <tr>
                   <td>
+                    {flights.Carriers.map((eachCarrier) => {
+                      if(eachCarrier.CarrierId === quote.OutboundLeg.CarrierIds[0]){
+                        return(
+                          <p>{eachCarrier.Name}</p>
+                          )
+                      }
+                    })}
+                  </td>
+                  <td>
                     <p>${quote.MinPrice}</p>
                   </td>
                   <td>
-                    <p>{quote.OutboundLeg.DepartureDate}</p>
+                    <p>{quote.OutboundLeg.DepartureDate.slice(0, 10)}</p>
                   </td>
                 </tr>
 
@@ -74,13 +79,6 @@ function Flights(props) {
               </tbody>
             </Table>
           </div>
-          {/* <ListGroup>
-            <ListGroup.Item>
-              {" "}
-              <p>${quote.MinPrice}</p>
-            </ListGroup.Item>
-            <ListGroup.Item></ListGroup.Item>
-          </ListGroup> */}
         </div>
       );
     });
@@ -100,38 +98,18 @@ function Flights(props) {
         <h2 className="flightheader">Book a Flight</h2>
       </div>
       <div className="flightform">
-      <form >
       <Form onSubmit={submit}>
-          <InputGroup size="md">
-            <InputGroup.Prepend>
-              <InputGroup.Text id="inputGroup-sizing-lg">
-                Enter City:{" "}
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              onChange={getCityb}
-              className="weatherInput"
-              aria-label="Medium"
-              aria-describedby="inputGroup-sizing-sm"
-              placeholder="From"
-              required="true"
-            />
-            <InputGroup.Text id="inputGroup-sizing-lg">
-              Enter City:{" "}
-            </InputGroup.Text>
-            <FormControl
-              placeholder="To"
-              onChange={getCitya}
-              className="weatherInput"
-              aria-label="Medium"
-              aria-describedby="inputGroup-sizing-sm"
-              require="true"
-            />
-            <Button variant="info" type="submit">Search</Button>
-          </InputGroup>
-        </Form>
-      </form>
-       
+        <Form.Group>
+          <Form.Label>From:</Form.Label>
+          <Form.Control type="text" placeholder="Enter city" onChange={getCitya}/>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>To:</Form.Label>
+          <Form.Control type="text" placeholder="Enter city" onChange={getCityb}/>
+        </Form.Group>
+        <Button variant="info" type="submit">Search</Button>
+      </Form>
       </div>
       {toggle ? (
       <div className="flightresults">

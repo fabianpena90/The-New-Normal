@@ -16,20 +16,11 @@
   height: 33px;
   margin-top: 3px;
 }
+
 .cityinput2 {
   margin-right: 108px;
   height: 33px;
   margin-top: 3px;
-}
-
-.citybtn {
-  border-radius: 10%;
-  color: white;
-  background-color: rgb(23, 165, 190);
-}
-
-.citybtn:hover {
-  filter: brightness(80%);
 }
 
 .flightresults {
@@ -53,9 +44,9 @@
 }
 
 tbody p {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 thead th {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }

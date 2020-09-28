@@ -1,3 +1,20 @@
+body {
+  min-height: 100%;
+
+  margin: 0 0 100px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 a.nav-link {
   color: black !important;
   font-size: 1rem;
@@ -11,7 +28,8 @@ a.nav-link:hover {
   /* padding: 10px; */
 }
 
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand {
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -22,8 +40,16 @@ a.nav-link:hover {
 
 .footer {
   position: absolute;
+  left: 0;
   bottom: 0;
-  left: 38%;
-  right: 33%;
-  padding-bottom: 10px;
+  padding: 10px 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(73, 73, 77, 0.705);
+  color: white;
+  text-align: center;
+}
+
+.push {
+  height: 50px;
 }

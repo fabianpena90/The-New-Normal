@@ -4,6 +4,7 @@ import '../Covid.css'
 
 // Boostrap
 import Table from 'react-bootstrap/Table'
+import Container from 'react-bootstrap/Container'
 
 function Covid(props) {
   const [covid, setCovid] = useState([]);
@@ -21,7 +22,7 @@ function Covid(props) {
 
   function getDataCovid(){
     return covid.map((eachData) => {
-      console.log(eachData.negative, eachData.state, eachData.positive, eachData.death)
+      // console.log(eachData.negative, eachData.state, eachData.positive, eachData.death)
       return (
             <tr>
               <td>{eachData.state}</td>
@@ -34,9 +35,9 @@ function Covid(props) {
   }
 
   return (
-    <div className="covid">
+    <Container>
     <h2 className="covidHeader">Coronovirus Live Update</h2>
-     <Table striped bordered hover size="md">
+      <Table striped bordered hover size="md">
           <thead style={{textAlign: 'center'}}>
             <tr>
               <th>State</th>
@@ -46,10 +47,10 @@ function Covid(props) {
             </tr>
           </thead>
           <tbody style={{textAlign: 'center'}}>
-    {getDataCovid()}
+            {getDataCovid()}
           </tbody>
-        </Table>
-    </div>
+      </Table>
+    </Container>
   );
 }
 

@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../Flights.css";
 import Table from "react-bootstrap/Table";
-import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 
 

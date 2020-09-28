@@ -2,7 +2,9 @@ import React from "react";
 import "../News.css";
 
 // Bootstrap
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container'
+
 
 function News(props) {
   console.log(props);

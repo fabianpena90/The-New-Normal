@@ -3,8 +3,6 @@ import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import "./Homepage.css";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 // Importing Components
 import News from "./components/News";
@@ -64,7 +62,7 @@ function App() {
             id="basic-navbar-nav"
             className="justify-content-end menu"
           >
-            <Nav className="justify-content-center" defaultActiveKey="#first">
+            <Nav className="justify-content-center navs" defaultActiveKey="#first">
               <Nav.Link><Link className="links" to="/home">Home</Link></Nav.Link>
               <Nav.Link><Link className="links" to="/news">News</Link></Nav.Link>
               <Nav.Link><Link className="links" to="/events">Events</Link></Nav.Link>

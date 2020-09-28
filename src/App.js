@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import "./Homepage.css";
 import axios from "axios";
@@ -65,13 +65,19 @@ function App() {
             className="justify-content-end menu"
           >
             <Nav className="justify-content-center" defaultActiveKey="#first">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/news">News</Nav.Link>
-              <Nav.Link href="/events">Events</Nav.Link>
-              <Nav.Link href="/weather">Weather</Nav.Link>
-              <Nav.Link href="/flight">Search Flights</Nav.Link>
-              <Nav.Link href="/recipes">Cooking Recipes</Nav.Link>
-              <Nav.Link href="/coronavirus">COVID-19</Nav.Link>
+              {/* <Link><Nav.Link to="/home">Home</Nav.Link></Link>
+              <Nav.Link to="/news">News</Nav.Link>
+              <Nav.Link to="/events">Events</Nav.Link>
+              <Nav.Link to="/weather">Weather</Nav.Link>
+              <Nav.Link to="/flight">Search Flights</Nav.Link>
+              <Nav.Link to="/recipes">Cooking Recipes</Nav.Link> */}
+              <Nav.Link><Link to="/home">Home</Link></Nav.Link>
+              <Nav.Link><Link to="/news">News</Link></Nav.Link>
+              <Nav.Link><Link to="/events">Events</Link></Nav.Link>
+              <Nav.Link><Link to="/weather">Weather</Link></Nav.Link>
+              <Nav.Link><Link to="/flight">Search Flights</Link></Nav.Link>
+              <Nav.Link><Link to="/recipes">Recipes</Link></Nav.Link>
+              <Nav.Link><Link to="/coronavirus">COVID-19</Link></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

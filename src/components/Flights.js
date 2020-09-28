@@ -114,6 +114,9 @@ function Flights(props) {
       {toggle ? (
       <div className="flightresults">
         <h2 className="flightHeading">{flights.Places?.[1].CityName} to {flights.Places?.[0].CityName}</h2>
+
+
+        
         {getQuotes()}
       </div>
       ): null }

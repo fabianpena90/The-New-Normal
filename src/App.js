@@ -12,6 +12,7 @@ import Flights from "./components/Flights";
 import Recipes from "./components/Recipes";
 import Quotes from "./components/Quotes";
 import Footer from "./components/Footer";
+import Covid from "./components/Covid";
 
 // Bootstrap React
 import Navbar from 'react-bootstrap/Navbar'
@@ -58,6 +59,7 @@ function App() {
           <Nav.Link href="/weather">Weather</Nav.Link>
           <Nav.Link href="/flight">Search Flights</Nav.Link>
           <Nav.Link href="/recipes">Cooking Recipes</Nav.Link>
+          <Nav.Link href="/coronavirus">COVID-19</Nav.Link>
         </Nav>
       </Navbar.Collapse>
       </Navbar>
@@ -89,9 +91,13 @@ function App() {
            exact path="/recipes"
           render={(props) => <Recipes {...props} />}
         ></Route>
+        <Route
+           exact path="/coronavirus"
+          render={(props) => <Covid {...props} />}
+        ></Route>
       </Switch>
-      <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

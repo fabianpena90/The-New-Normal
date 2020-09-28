@@ -4,6 +4,8 @@ import "../Weather.css";
 
 // Bootstrap
 import InputGroup from "react-bootstrap/InputGroup";
+import { faCloudSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
@@ -35,6 +37,12 @@ function Weather(props) {
     <div>
       <div className="weather">
         <h2 className="weatherHeader">Weather</h2>
+        {/* <FontAwesomeIcon
+          className="flighticon"
+          icon={faCloudSun}
+          style={{ color: "black" }}
+          size="2x"
+        /> */}
         <InputGroup size="md">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-lg">

@@ -40,7 +40,7 @@
 
 .flightHeading {
   padding-bottom: 40px;
-  font-weight: bold
+  font-weight: bold;
 }
 
 tbody p {
@@ -49,4 +49,8 @@ tbody p {
 
 thead th {
   font-size: 1.5rem;
+}
+
+.flighticon {
+  align-items: center;
 }

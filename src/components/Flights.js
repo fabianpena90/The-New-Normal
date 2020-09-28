@@ -6,14 +6,23 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
+import { faCloudSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGoogle,
+  faFacebook,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 function Flights(props) {
   const [flights, setFlights] = useState([]);
   const [firstCity, setFirstCity] = useState("");
   const [secondCity, setSecondCity] = useState("");
   const [toggle, setToggle] = useState(false);
-
 
   function submit(e) {
     e.preventDefault();
@@ -35,7 +44,6 @@ function Flights(props) {
         console.log(response.data);
         setFlights(response.data);
         setToggle(true);
-
       })
       .catch((error) => {
         console.log(error);
@@ -60,10 +68,11 @@ function Flights(props) {
                 <tr>
                   <td>
                     {flights.Carriers.map((eachCarrier) => {
-                      if(eachCarrier.CarrierId === quote.OutboundLeg.CarrierIds[0]){
-                        return(
-                          <p>{eachCarrier.Name}</p>
-                          )
+                      if (
+                        eachCarrier.CarrierId ===
+                        quote.OutboundLeg.CarrierIds[0]
+                      ) {
+                        return <p>{eachCarrier.Name}</p>;
                       }
                     })}
                   </td>
@@ -96,27 +105,45 @@ function Flights(props) {
     <div>
       <div>
         <h2 className="flightheader">Book a Flight</h2>
+        {/* <FontAwesomeIcon
+          className="flighticon"
+          icon={faCloudSun}
+          style={{ color: "black" }}
+          size="2x"
+        /> */}
       </div>
       <div className="flightform">
-      <Form onSubmit={submit}>
-        <Form.Group>
-          <Form.Label>From:</Form.Label>
-          <Form.Control type="text" placeholder="Enter city" onChange={getCitya}/>
-        </Form.Group>
+        <Form onSubmit={submit}>
+          <Form.Group>
+            <Form.Label>From:</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter city"
+              onChange={getCitya}
+            />
+          </Form.Group>
 
-        <Form.Group>
-          <Form.Label>To:</Form.Label>
-          <Form.Control type="text" placeholder="Enter city" onChange={getCityb}/>
-        </Form.Group>
-        <Button variant="info" type="submit">Search</Button>
-      </Form>
+          <Form.Group>
+            <Form.Label>To:</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter city"
+              onChange={getCityb}
+            />
+          </Form.Group>
+          <Button variant="info" type="submit">
+            Search
+          </Button>
+        </Form>
       </div>
       {toggle ? (
-      <div className="flightresults">
-        <h2 className="flightHeading">{flights.Places?.[1].CityName} to {flights.Places?.[0].CityName}</h2>
-        {getQuotes()}
-      </div>
-      ): null }
+        <div className="flightresults">
+          <h2 className="flightHeading">
+            {flights.Places?.[1].CityName} to {flights.Places?.[0].CityName}
+          </h2>
+          {getQuotes()}
+        </div>
+      ) : null}
     </div>
   );
 }

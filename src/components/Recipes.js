@@ -35,7 +35,7 @@ function Recipes() {
 
   return (
     <div>
-      <h1 className="recipehead">Search your favorite recipes!</h1>
+      <h2 className="recipehead">Recipes</h2>
 
       {/* <button onClick={getData}>button</button> */}
       {/* <form onSubmit={onSubmit}>
@@ -61,6 +61,8 @@ function Recipes() {
               className="weatherInput"
               aria-label="Medium"
               aria-describedby="inputGroup-sizing-sm"
+              required="true"
+              placeholder="Enter your favorite food type"
             />
              <Button variant="info" type="submit">Search</Button>
           </InputGroup>
@@ -81,7 +83,7 @@ function Recipes() {
                       </Card.Text>
                       <Button variant="primary">
                         <a href={recipe.recipe.url} className="linktext">
-                          recipes
+                          Full recipe
                         </a>
                       </Button>
                     </div>

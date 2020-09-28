@@ -34,7 +34,7 @@ function Weather(props) {
   return (
     <div>
       <div className="weather">
-        <h1 className="weatherHeader">Weather</h1>
+        <h2 className="weatherHeader">Weather</h2>
         <InputGroup size="md">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-lg">
@@ -46,6 +46,9 @@ function Weather(props) {
             onChange={cityName}
             aria-label="Medium"
             aria-describedby="inputGroup-sizing-sm"
+            value=""
+            required="true"
+            placeholder="City"
           />
           <Button onClick={getWeather} variant="info">
             Search

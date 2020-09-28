@@ -55,7 +55,7 @@ function News(props) {
   });
   return (
     <div>
-      <h1 className="newsHeader">Latest News</h1>
+      <h2 className="newsHeader">Latest News</h2>
       {freshNews}
     </div>
   );

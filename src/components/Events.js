@@ -43,7 +43,7 @@ function Restaurants() {
   
   return (
     <div>
-      <h1 className="eventsHeader">Events</h1>
+      <h2 className="eventsHeader">Events</h2>
       {showEvents()}
     </div>
   );

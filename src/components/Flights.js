@@ -97,7 +97,7 @@ function Flights(props) {
   return (
     <div>
       <div>
-        <h1 className="flightheader">Book a Flight</h1>
+        <h2 className="flightheader">Book a Flight</h2>
       </div>
       <br></br>
       <br></br>
@@ -117,6 +117,7 @@ function Flights(props) {
               aria-label="Medium"
               aria-describedby="inputGroup-sizing-sm"
               placeholder="From"
+              required="true"
             />
             <InputGroup.Text id="inputGroup-sizing-lg">
               Enter City:{" "}
@@ -127,6 +128,7 @@ function Flights(props) {
               className="weatherInput"
               aria-label="Medium"
               aria-describedby="inputGroup-sizing-sm"
+              require="true"
             />
             <Button variant="info" type="submit">Search</Button>
           </InputGroup>

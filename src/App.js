@@ -5,7 +5,6 @@ import "./Homepage.css";
 import axios from "axios";
 
 // Importing Components
-// import HomePage from "./components/HomePage";
 import News from "./components/News";
 import Weather from "./components/Weather";
 import Events from "./components/Events";
@@ -14,7 +13,6 @@ import Recipes from "./components/Recipes";
 import Quotes from "./components/Quotes";
 
 // Bootstrap React
-// import Jumbotron from 'react-bootstrap/Jumbotron'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
@@ -68,7 +66,6 @@ function App() {
 
     {/* Switch and Routes  */}
     <div>
-    {/* <Jumbotron className="paths"> */}
       <Switch> 
       <Route
           exact path="/home"
@@ -92,7 +89,6 @@ function App() {
           render={(props) => <Recipes {...props} />}
         ></Route>
       </Switch>
-      {/* </Jumbotron> */}
       </div>
     </div>
   );

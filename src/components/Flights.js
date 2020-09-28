@@ -93,6 +93,7 @@ function Flights(props) {
   return (
     <div>
       <div>
+      <img className="newNY" src="./img/skyscanner.png" alt="title"/>
         <h2 className="flightheader">Book a Flight</h2>
       </div>
       <div className="flightform">

@@ -65,19 +65,13 @@ function App() {
             className="justify-content-end menu"
           >
             <Nav className="justify-content-center" defaultActiveKey="#first">
-              {/* <Link><Nav.Link to="/home">Home</Nav.Link></Link>
-              <Nav.Link to="/news">News</Nav.Link>
-              <Nav.Link to="/events">Events</Nav.Link>
-              <Nav.Link to="/weather">Weather</Nav.Link>
-              <Nav.Link to="/flight">Search Flights</Nav.Link>
-              <Nav.Link to="/recipes">Cooking Recipes</Nav.Link> */}
-              <Nav.Link><Link to="/home">Home</Link></Nav.Link>
-              <Nav.Link><Link to="/news">News</Link></Nav.Link>
-              <Nav.Link><Link to="/events">Events</Link></Nav.Link>
-              <Nav.Link><Link to="/weather">Weather</Link></Nav.Link>
-              <Nav.Link><Link to="/flight">Search Flights</Link></Nav.Link>
-              <Nav.Link><Link to="/recipes">Recipes</Link></Nav.Link>
-              <Nav.Link><Link to="/coronavirus">COVID-19</Link></Nav.Link>
+              <Nav.Link><Link className="links" to="/home">Home</Link></Nav.Link>
+              <Nav.Link><Link className="links" to="/news">News</Link></Nav.Link>
+              <Nav.Link><Link className="links" to="/events">Events</Link></Nav.Link>
+              <Nav.Link><Link className="links" to="/weather">Weather</Link></Nav.Link>
+              <Nav.Link><Link className="links" to="/flight">Search Flights</Link></Nav.Link>
+              <Nav.Link><Link className="links" to="/recipes">Recipes</Link></Nav.Link>
+              <Nav.Link><Link className="links" to="/coronavirus">COVID-19</Link></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

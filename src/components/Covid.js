@@ -36,7 +36,7 @@ function Covid(props) {
 
   return (
     <Container>
-    <h2 className="covidHeader">Coronovirus Live Update</h2>
+    <img className="newNY" src="./img/COVID19-NP-Logo.png" alt="title"/>
       <Table striped bordered hover size="md">
           <thead style={{textAlign: 'center'}}>
             <tr>

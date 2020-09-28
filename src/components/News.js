@@ -27,7 +27,7 @@ function News(props) {
   });
   return (
     <div>
-      <h2 className="newsHeader">Latest News</h2>
+      <img className="newNY" src="./img/nytimess.png" alt="title"/>
       {freshNews}
     </div>
   );

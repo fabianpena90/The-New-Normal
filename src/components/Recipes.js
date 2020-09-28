@@ -32,7 +32,8 @@ function Recipes() {
 
   return (
     <div>
-      <h2 className="recipehead">Recipes</h2>
+    <img style={{width: '500px'}} className="newNY" src="./img/recipesLogo.png" alt="title"/>
+      {/* <h2 className="recipehead">Recipes</h2> */}
       <div className="food">
         <Form onSubmit={onSubmit}>
           <InputGroup size="md">

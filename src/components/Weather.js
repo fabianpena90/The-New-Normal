@@ -33,7 +33,7 @@ function Weather(props) {
   return (
     <div>
       <div className="weather">
-        <h2 className="weatherHeader">Weather</h2>
+      <img className="newNY" src="./img/weatherLogo.png" alt="title"/>
         <InputGroup size="md">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-lg">

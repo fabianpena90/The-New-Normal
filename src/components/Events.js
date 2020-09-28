@@ -49,7 +49,8 @@ function Restaurants() {
   
   return (
     <div>
-      <h2 className="eventsHeader">Events</h2>
+      <img className="ticket" src="./img/ticketmasterLogo.png" alt="title"/>
+      {/* <h2 className="eventsHeader">Events</h2> */}
       {showEvents()}
     </div>
   );

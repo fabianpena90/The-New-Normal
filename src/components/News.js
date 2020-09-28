@@ -3,6 +3,8 @@ import "../News.css";
 
 // Bootstrap
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container'
+import Image from 'react-bootstrap/Image'
 
 
 function News(props) {
@@ -10,8 +12,8 @@ function News(props) {
   let freshNews = props.news.map((news) => {
     // console.log(news.title)
     return (
-      <div className="newscard">
-        <Card style={{ width: "40rem" }}>
+      <Container style={{marginBottom: ' 40px'}}>
+        <Card style={{ width: "35rem", margin: 'auto' }}>
           <Card.Img variant="top" src={news.multimedia[0].url} />
           <Card.Body>
             <Card.Title className="halfBody">{news.title}</Card.Title>
@@ -22,12 +24,13 @@ function News(props) {
             <Card.Link href={news.short_url}>Read whole article</Card.Link>
           </Card.Body>
         </Card>
-      </div>
+      </Container>
     );
   });
   return (
     <div>
-      <img className="newNY" src="./img/nytimess.png" alt="title"/>
+    <Image className="newNY" src="./img/nytimess.png" fluid />
+      {/* <img className="newNY" src="./img/nytimess.png" alt="title"/> */}
       {freshNews}
     </div>
   );

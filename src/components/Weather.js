@@ -4,10 +4,10 @@ import "../Weather.css";
 
 // Bootstrap
 import InputGroup from "react-bootstrap/InputGroup";
-
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Image from 'react-bootstrap/Image'
 
 function Weather(props) {
   const [weather, setWeather] = useState({ weather: ["description: "] }); // Weather Data
@@ -33,7 +33,7 @@ function Weather(props) {
   return (
     <div>
       <div className="weather">
-      <img className="newNY" src="./img/weatherLogo.png" alt="title"/>
+      <Image className="newNY" src="./img/weatherLogo.png" fluid />
         <InputGroup size="md">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-lg">

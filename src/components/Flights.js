@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../Flights.css";
+
+// Bootstrap
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Image from 'react-bootstrap/Image'
+
 
 
 function Flights(props) {
@@ -93,8 +97,9 @@ function Flights(props) {
   return (
     <div>
       <div>
-      <img className="newNY" src="./img/skyscanner.png" alt="title"/>
-        <h2 className="flightheader">Book a Flight</h2>
+      <Image className="newNY" src="./img/skyscanner.png" fluid />
+      {/* <img className="newNY" src="./img/skyscanner.png" alt="title"/> */}
+        {/* <h2 className="flightheader">Book a Flight</h2> */}
       </div>
       <div className="flightform">
       <Form onSubmit={submit}>

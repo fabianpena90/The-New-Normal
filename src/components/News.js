@@ -16,7 +16,7 @@ function News(props) {
         <Card style={{ width: "35rem", margin: 'auto' }}>
           <Card.Img variant="top" src={news.multimedia[0].url} />
           <Card.Body>
-            <Card.Title className="halfBody">{news.title}</Card.Title>
+            <Card.Title className="halfBody"><h3><strong>{news.title}</strong></h3></Card.Title>
             <Card.Text>{news.abstract}</Card.Text>
             <Card.Text>{news.geo_facet[0]}</Card.Text>
             <Card.Text>{news.item_type}</Card.Text>
@@ -30,7 +30,6 @@ function News(props) {
   return (
     <div>
     <Image className="newNY" src="./img/nytimess.png" fluid />
-      {/* <img className="newNY" src="./img/nytimess.png" alt="title"/> */}
       {freshNews}
     </div>
   );

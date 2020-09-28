@@ -1,20 +1,21 @@
-import React from 'react';
-import '../App.css'
-
-// FontAwesome
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
+import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-library.add(fas, fab);
-
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 
 
 function Footer(props) {
   return (
     <div className="footer">
-    
+      <strong>&copy; Copyrights</strong> The New Normal - 2020 by Fabian Pena{" "}
+      <a href="https://github.com/fabianpena90">
+        <FontAwesomeIcon icon={faGithub} style={{ color: "white" }} size="2x" />
+      </a>{" "}
+      & Matt Angel{" "}
+      <a href="https://github.com/mattangelmia">
+        {" "}
+        <FontAwesomeIcon icon={faGithub} style={{ color: "white" }} size="2x" />
+      </a>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import Card from 'react-bootstrap/Card'
 
 function Restaurants() {
   
@@ -25,16 +26,18 @@ function Restaurants() {
    return events.map((eachEvent) => {
     // let uniqueEvents = [...new Set(events)];
       return (
-      <div>
-        <Container className="newsContainer" fluid="md">
-        <Row className="justify-content-lg-center">
-          <Col sm={8}>
-          <h3>{eachEvent.name}</h3>
-          <Image className="eventsImg" src={eachEvent.images[1].url} fluid />
-          <p className="eventsDescription">{eachEvent.pleaseNote}</p>
-          </Col>
-        </Row>
-      </Container>
+      <div className="eventsCard">
+      <Card style={{ width: "50rem", margin: "auto"}}>
+          <Card.Img variant="top" src={eachEvent.images[1].url} />
+          <Card.Body>
+            <Card.Title className="halfBody">{eachEvent.name}</Card.Title>
+            <Card.Text>{eachEvent.pleaseNote}</Card.Text>
+            {/* <Card.Text>{news.geo_facet[0]}</Card.Text>
+            <Card.Text>{news.item_type}</Card.Text>
+            <Card.Text>{news.byline}</Card.Text>
+            <Card.Link href={news.short_url}>Read whole article</Card.Link> */}
+          </Card.Body>
+      </Card>
         </div>
       )
     })

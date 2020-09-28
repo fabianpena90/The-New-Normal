@@ -46,7 +46,6 @@ function Weather(props) {
             onChange={cityName}
             aria-label="Medium"
             aria-describedby="inputGroup-sizing-sm"
-            value=""
             required="true"
             placeholder="City"
           />

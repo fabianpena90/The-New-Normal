@@ -12,3 +12,9 @@
   font-size: 3rem;
   font-weight: bold;
 }
+
+.eventsCard {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
+}

@@ -99,9 +99,6 @@ function Flights(props) {
       <div>
         <h2 className="flightheader">Book a Flight</h2>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
       <div className="flightform">
       <form >
       <Form onSubmit={submit}>

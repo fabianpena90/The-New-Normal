@@ -1,16 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../News.css";
 
 // Bootstrap
-import Container from "react-bootstrap/Container";
-import ListGroup from "react-bootstrap/ListGroup";
-
-import ListGroupItem from "react-bootstrap/ListGroupItem";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import { Card } from "react-bootstrap";
+import Card from 'react-bootstrap/Card'
 
 function News(props) {
   console.log(props);
@@ -28,8 +20,6 @@ function News(props) {
             <Card.Text>{news.byline}</Card.Text>
             <Card.Link href={news.short_url}>Read whole article</Card.Link>
           </Card.Body>
-          {/* <ListGroup className="list-group-flush">
-          </ListGroup> */}
         </Card>
       </div>
     );

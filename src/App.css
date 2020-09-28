@@ -37,6 +37,21 @@ a.nav-link {
   background-color: transparent !important;
 }
 
+
+.links {
+  color: black;
+}
+
+.links:hover {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color:  lightgrey;
+  padding: 5px;
+}
+
+/* Footer section */
 .footer {
   position: absolute;
   left: 0;
@@ -53,16 +68,10 @@ a.nav-link {
   height: 10px;
 }
 
-.links {
-  color: black;
+.logos {
+  color: white;;
 }
 
-.links:hover {
-  font-weight: bold;
+.logos:hover {
   color: black;
-  text-decoration: none;
-  border-radius: 10px;
-  background-color:  lightgrey;
-  padding: 5px;
 }
-

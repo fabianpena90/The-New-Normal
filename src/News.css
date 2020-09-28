@@ -9,13 +9,14 @@
 
 .newsArticle a:hover {
   color: tomato;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .newsHeader {
-  text-align:center;
-  margin: 40px 0 10px 0;
+  text-align: center;
+  margin: 40px 0 40px 0;
   font-size: 4rem;
+  font-weight: bold;
 }
 
 .newsTitle {
@@ -23,6 +24,13 @@
 }
 
 .navbar-light .navbar-brand:hover {
-  color: rgba(255,255,255,.3);
-  text-shadow: 0 0 15px rgba(34, 31, 31, 0.954), 0 0 10px rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 15px rgba(34, 31, 31, 0.954),
+    0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.newscard {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
 }

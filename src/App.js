@@ -20,6 +20,8 @@ import Nav from 'react-bootstrap/Nav'
 
 function App() {
   let [news, setNews] = useState([]);
+  const [navbar, setNavbar] = useState(false);
+  
   useEffect(() => {
     async function getNews() {
       let res = await axios.get(
@@ -31,11 +33,22 @@ function App() {
     getNews();
   }, []);
 
+  const bg = () => {
+    //console.log(window.scrollY)
+    if(window.scrollY > 50){
+      setNavbar(false)
+    } else {
+      setNavbar(true)
+    }
+  }
+
+  window.addEventListener('scroll', bg)
+
   return (
     <div className="hero">
 
     {/* Navbar */}
-      <Navbar id="mainNavbar" sticky="top" className="bg-dark align-content-center" expand="lg">
+      <Navbar id={navbar ? 'mainNavbar' : null} sticky="top" className="bg-light align-content-center" expand="lg">
       <Navbar.Brand className="logo" href="/home">The New Normal</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end menu">

@@ -8,7 +8,7 @@
   margin: 0 25%;
 }
 
-#inputGroup-sizing-lg{
+#inputGroup-sizing-lg {
   /* background-color: #544c4c */
   font-weight: bold;
 }
@@ -17,11 +17,28 @@
   font-size: 40px;
 }
 
-.weather-description {
-  font-size: 1.5rem;
+.weatherData {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
 }
 
-.weatherData {
-  margin-top: 50px ;
-  text-align: center;
+.weatherData::after {
+  animation: fade 5s linear infinite;
+}
+
+@keyframes fade {
+  0% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(100%);
+  }
+  97% {
+    transform: translateY(100%);
+  }
+}
+
+.weatherinfo {
+  font-size: 100px;
 }

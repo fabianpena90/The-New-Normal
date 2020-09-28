@@ -71,6 +71,7 @@ function App() {
               <Nav.Link href="/weather">Weather</Nav.Link>
               <Nav.Link href="/flight">Search Flights</Nav.Link>
               <Nav.Link href="/recipes">Cooking Recipes</Nav.Link>
+              <Nav.Link href="/coronavirus">COVID-19</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -102,6 +103,11 @@ function App() {
               exact
               path="/recipes"
               render={(props) => <Recipes {...props} />}
+            ></Route>
+            <Route
+              exact
+              path="/coronavirus"
+              render={(props) => <Covid {...props} />}
             ></Route>
           </Switch>
           <div class="push"></div>

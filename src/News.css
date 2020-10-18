@@ -34,3 +34,9 @@
   justify-content: space-evenly;
   padding-bottom: 40px;
 }
+
+.newNY {
+  display: block;
+  margin: auto;
+  padding: 40px 0;
+}

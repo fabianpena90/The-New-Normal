@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../Weather.css";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // Bootstrap
 import InputGroup from "react-bootstrap/InputGroup";
@@ -10,7 +11,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
 
 function Weather(props) {
   const [weather, setWeather] = useState({ weather: ["description: "] }); // Weather Data
@@ -36,13 +36,13 @@ function Weather(props) {
   return (
     <div>
       <div className="weather">
-        <h2 className="weatherHeader">Weather</h2>
-        {/* <FontAwesomeIcon
-          className="flighticon"
+        <img className="newNY" src="./img/weatherLogo.png" alt="title" />
+        <FontAwesomeIcon
           icon={faCloudSun}
           style={{ color: "black" }}
-          size="2x"
-        /> */}
+          size="3x"
+          className="weathericon"
+        />
         <InputGroup size="md">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-lg">

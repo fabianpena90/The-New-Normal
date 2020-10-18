@@ -2,7 +2,8 @@ import React from "react";
 import "../News.css";
 
 // Bootstrap
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+
 
 function News(props) {
   console.log(props);
@@ -26,7 +27,7 @@ function News(props) {
   });
   return (
     <div>
-      <h2 className="newsHeader">Latest News</h2>
+      <img className="newNY" src="./img/nytimess.png" alt="title"/>
       {freshNews}
     </div>
   );

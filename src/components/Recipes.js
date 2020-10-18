@@ -3,12 +3,9 @@ import axios from "axios";
 import "../Recipes.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
 
 function Recipes() {
   const [query, setQuery] = useState("");
@@ -35,18 +32,8 @@ function Recipes() {
 
   return (
     <div>
-      <h2 className="recipehead">Recipes</h2>
-
-      {/* <button onClick={getData}>button</button> */}
-      {/* <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          placeholder="Search Food"
-          onChange={onType}
-          value={query}
-        />
-        <input type="submit" value="search" />
-      </form> */}
+    <img style={{width: '500px'}} className="newNY" src="./img/recipesLogo.png" alt="title"/>
+      {/* <h2 className="recipehead">Recipes</h2> */}
       <div className="food">
         <Form onSubmit={onSubmit}>
           <InputGroup size="md">
@@ -82,7 +69,7 @@ function Recipes() {
                         <p className="recipesText">Calories:{recipe.recipe.calories.toFixed(0)}</p>
                       </Card.Text>
                       <Button variant="primary">
-                        <a href={recipe.recipe.url} className="linktext">
+                        <a href={recipe.recipe.url} className="linktext" target="_blank">
                           Full recipe
                         </a>
                       </Button>
@@ -90,33 +77,6 @@ function Recipes() {
                   </Card.Body>
                 </Card>
               </div>
-              {/* <li>
-                <img src={recipe.recipe.image}></img>
-              </li>
-              <li>
-                <h2>{recipe.recipe.label}</h2>
-              </li>
-              <li>
-                <h4>Calories:{recipe.recipe.calories.toFixed(0)}</h4>
-              </li>
-              <li>
-                <a href={recipe.recipe.url}>recipes</a>
-              </li> */}
-              {/* <li> */}
-              {/* <p>{recipe.recipe.ingredients[1].text}</p>
-                </li>
-                <li>
-                  <p>{recipe.recipe.ingredients[2].text}</p>
-                </li>
-                <li>
-                  <p>{recipe.recipe.ingredients[3].text}</p>
-                </li>
-                <li>
-                  <p>{recipe.recipe.ingredients[4].text}</p>
-                </li> */}
-              {/* <li>
-                  <h4>{recipe.recipe.ingredients[5].text}</h4>
-                </li> */}
             </ul>
           ))}
       </div>

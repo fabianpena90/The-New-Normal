@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import "./Homepage.css";
 import axios from "axios";
@@ -14,6 +14,7 @@ import Flights from "./components/Flights";
 import Recipes from "./components/Recipes";
 import Quotes from "./components/Quotes";
 import Footer from "./components/Footer";
+import Covid from "./components/Covid";
 
 // Bootstrap React
 import Navbar from "react-bootstrap/Navbar";
@@ -64,12 +65,41 @@ function App() {
             className="justify-content-end menu"
           >
             <Nav className="justify-content-center" defaultActiveKey="#first">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/news">News</Nav.Link>
-              <Nav.Link href="/events">Events</Nav.Link>
-              <Nav.Link href="/weather">Weather</Nav.Link>
-              <Nav.Link href="/flight">Search Flights</Nav.Link>
-              <Nav.Link href="/recipes">Cooking Recipes</Nav.Link>
+              <Nav.Link>
+                <Link className="links" to="/home">
+                  <i class="fas fa-cloud-sun-rain"></i>
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="links" to="/news">
+                  News
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="links" to="/events">
+                  Events
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="links" to="/weather">
+                  Weather
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="links" to="/flight">
+                  Search Flights
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="links" to="/recipes">
+                  Recipes
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="links" to="/coronavirus">
+                  COVID-19
+                </Link>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -102,11 +132,17 @@ function App() {
               path="/recipes"
               render={(props) => <Recipes {...props} />}
             ></Route>
+            <Route
+              exact
+              path="/coronavirus"
+              render={(props) => <Covid {...props} />}
+            ></Route>
           </Switch>
           <div class="push"></div>
           <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

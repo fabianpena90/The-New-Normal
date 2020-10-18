@@ -30,8 +30,8 @@ function Restaurants() {
             <Card.Title className="halfBody"><strong>{eachEvent.name}</strong></Card.Title>
             <Card.Text>
             <h6>Price Range</h6>
-            ${eachEvent.priceRanges[0].min} - 
-            ${eachEvent.priceRanges[0].max}
+            ${eachEvent.priceRanges?.[0]?.min} - 
+            ${eachEvent.priceRanges?.[0]?.max}
             </Card.Text> 
             <Card.Text>
             <h5>Location: {eachEvent._embedded.venues[0].name}</h5>
@@ -49,7 +49,8 @@ function Restaurants() {
   
   return (
     <div>
-      <h2 className="eventsHeader">Events</h2>
+      <img className="ticket" src="./img/ticketmasterLogo.png" alt="title"/>
+      {/* <h2 className="eventsHeader">Events</h2> */}
       {showEvents()}
     </div>
   );

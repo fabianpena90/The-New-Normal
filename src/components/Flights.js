@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../Flights.css";
 import Table from "react-bootstrap/Table";
-import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import { faCloudSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -104,6 +102,7 @@ function Flights(props) {
   return (
     <div>
       <div>
+        <img className="newNY" src="./img/skyscanner.png" alt="title" />
         <h2 className="flightheader">Book a Flight</h2>
         {/* <FontAwesomeIcon
           className="flighticon"
@@ -141,6 +140,7 @@ function Flights(props) {
           <h2 className="flightHeading">
             {flights.Places?.[1].CityName} to {flights.Places?.[0].CityName}
           </h2>
+
           {getQuotes()}
         </div>
       ) : null}

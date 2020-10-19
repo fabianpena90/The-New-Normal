@@ -1,6 +1,8 @@
 # The New Normal Informative
 
 Getting news, events, flights, weather, inspirational quotes, cooking recipes by fetching data from different API's.
+### Link
+https://the-new-normal-informative.netlify.app/
 
 ## Technology
 

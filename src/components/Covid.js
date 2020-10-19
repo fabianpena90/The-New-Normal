@@ -5,6 +5,7 @@ import '../Covid.css'
 // Boostrap
 import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
+import Image from 'react-bootstrap/Image'
 
 function Covid(props) {
   const [covid, setCovid] = useState([]);
@@ -36,7 +37,8 @@ function Covid(props) {
 
   return (
     <Container>
-    <img className="newNY" src="./img/COVID19-NP-Logo.png" alt="title"/>
+    <Image className="newNY" src="./img/COVID19-NP-Logo.png" fluid />
+    {/* <img className="newNY" src="./img/COVID19-NP-Logo.png" alt="title"/> */}
       <Table striped bordered hover size="md">
           <thead style={{textAlign: 'center'}}>
             <tr>

@@ -5,12 +5,16 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // Bootstrap
 import InputGroup from "react-bootstrap/InputGroup";
+<<<<<<< HEAD
 import { faCloudSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+=======
+>>>>>>> bf14904e324455041cd7e389efb39579371d6cdf
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Image from 'react-bootstrap/Image'
 
 function Weather(props) {
   const [weather, setWeather] = useState({ weather: ["description: "] }); // Weather Data
@@ -36,6 +40,7 @@ function Weather(props) {
   return (
     <div>
       <div className="weather">
+<<<<<<< HEAD
         <img className="newNY" src="./img/weatherLogo.png" alt="title" />
         <FontAwesomeIcon
           icon={faCloudSun}
@@ -43,6 +48,9 @@ function Weather(props) {
           size="3x"
           className="weathericon"
         />
+=======
+      <Image className="newNY" src="./img/weatherLogo.png" fluid />
+>>>>>>> bf14904e324455041cd7e389efb39579371d6cdf
         <InputGroup size="md">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-lg">

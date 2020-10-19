@@ -57,7 +57,7 @@ function Flights(props) {
             <Table variant="dark" striped bordered hover>
               <thead>
                 <tr>
-                  <th>Carrier</th>
+                  <th>carrier</th>
                   <th>Price</th>
                   <th>Date</th>
                 </tr>

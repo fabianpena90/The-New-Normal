@@ -5,6 +5,10 @@ import '../Events.css'
 // Bootstrap
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container'
+
+
 
 function Restaurants() {
   
@@ -23,25 +27,25 @@ function Restaurants() {
    return events.map((eachEvent) => {
     // let uniqueEvents = [...new Set(events)];
       return (
-      <div className="eventsCard">
-      <Card style={{ width: "50rem", margin: "auto"}}>
-          <Card.Img variant="top" src={eachEvent.images[1].url} />
-          <Card.Body>
-            <Card.Title className="halfBody"><strong>{eachEvent.name}</strong></Card.Title>
-            <Card.Text>
-            <h6>Price Range</h6>
-            ${eachEvent.priceRanges?.[0]?.min} - 
-            ${eachEvent.priceRanges?.[0]?.max}
-            </Card.Text> 
-            <Card.Text>
-            <h5>Location: {eachEvent._embedded.venues[0].name}</h5>
-            {eachEvent._embedded.venues[0].address.line1}
-            </Card.Text>
-            <Button href={eachEvent.url} variant="success" type="submit">Buy Tickets</Button>
-            <Card.Text></Card.Text>
-          </Card.Body>
-      </Card>
-        </div>
+        <Container style={{marginBottom: ' 40px'}}>
+          <Card border="light" style={{ width: "40rem", margin: "auto"}}>
+              <Card.Img variant="top" src={eachEvent.images[1].url} />
+              <Card.Body>
+                <Card.Title className="halfBody"><strong>{eachEvent.name}</strong></Card.Title>
+                <Card.Text>
+                <h6>Price Range</h6>
+                ${eachEvent.priceRanges?.[0]?.min} - 
+                ${eachEvent.priceRanges?.[0]?.max}
+                </Card.Text> 
+                <Card.Text>
+                <h5>Location: {eachEvent._embedded.venues[0].name}</h5>
+                {eachEvent._embedded.venues[0].address.line1}
+                </Card.Text>
+                <Button href={eachEvent.url} variant="success" type="submit">Buy Tickets</Button>
+                <Card.Text></Card.Text>
+              </Card.Body>
+          </Card>
+        </Container>
       )
     })
   }
@@ -49,7 +53,8 @@ function Restaurants() {
   
   return (
     <div>
-      <img className="ticket" src="./img/ticketmasterLogo.png" alt="title"/>
+    <Image className="newNY" src="./img/ticketmasterLogo.png" fluid />
+      {/* <img className="ticket" src="./img/ticketmasterLogo.png" alt="title"/> */}
       {/* <h2 className="eventsHeader">Events</h2> */}
       {showEvents()}
     </div>

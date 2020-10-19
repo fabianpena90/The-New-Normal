@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Image from 'react-bootstrap/Image'
+
 
 function Recipes() {
   const [query, setQuery] = useState("");
@@ -32,8 +34,7 @@ function Recipes() {
 
   return (
     <div>
-    <img style={{width: '500px'}} className="newNY" src="./img/recipesLogo.png" alt="title"/>
-      {/* <h2 className="recipehead">Recipes</h2> */}
+    <Image style={{width: '500px'}} className="newNY" src="./img/recipesLogo.png" fluid />
       <div className="food">
         <Form onSubmit={onSubmit}>
           <InputGroup size="md">

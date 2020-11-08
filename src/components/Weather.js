@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../Weather.css";
-// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import "../Weather.css"
 
-// Bootstrap
-import InputGroup from "react-bootstrap/InputGroup";
-import FormControl from "react-bootstrap/FormControl";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-// import Image from 'react-bootstrap/Image'
 
 function Weather(props) {
   const [weather, setWeather] = useState({ weather: ["description: "] }); // Weather Data
@@ -27,59 +20,43 @@ function Weather(props) {
   }
 
   function cityName(e) {
-    // console.log(e.target.value)
     setCity(e.target.value);
   }
 
   return (
-    <div>
-      <div className="weather">
-        <img className="newNY" src="./img/weatherLogo.png" alt="title" />
-        {/* <FontAwesomeIcon
-          icon={faCloudSun}
-          style={{ color: "black" }}
-          size="3x"
-          className="weathericon"
-        /> */}
-        <InputGroup size="md">
-          <InputGroup.Prepend>
-            <InputGroup.Text id="inputGroup-sizing-lg">
-              Enter City:{" "}
-            </InputGroup.Text>
-          </InputGroup.Prepend>
-          <FormControl
-            className="weatherInput"
-            onChange={cityName}
-            aria-label="Medium"
-            aria-describedby="inputGroup-sizing-sm"
-            required="true"
-            placeholder="City"
-          />
-          <Button onClick={getWeather} variant="info">
-            Search
-          </Button>
-        </InputGroup>
-      </div>
+    <div className=" ui container">
+    <img src="./img/weatherLogo.png" class="ui medium centered image" alt="Weather"/>
+    <div className="ui big fluid icon input">
+    <input onChange={cityName} type="text" placeholder="Enter City..."/>
+    <button 
+      className="ui icon button"
+      onClick={getWeather}
+      >
+      <i aria-hidden="true" className="search icon"></i>
+      </button>
+    </div>
       <div>
         {toggle ? (
-          <div className="weatherData">
-            <Card style={{ width: "25rem", margin: "auto" }}>
-              <Card.Body>
-                <Card.Title>
-                  <h1 className="cardTitle">{weather.name}</h1>
-                </Card.Title>
-                <Card.Text>
-                  <p className="weather-description">{`The actual tempeture is ${weather.main?.temp}F`}</p>{" "}
-                  {/* The ? is used for Optional Chaining*/}
-                  <p className="weather-description">{`Feels like ${weather.main?.feels_like}F`}</p>{" "}
-                  {/* The ? is used for Optional Chaining*/}
-                  <p className="weather-description">{`${weather.weather[0].description}`}</p>
-                  <p className="weather-description">
-                    {weather.weather[0].main}
-                  </p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
+          <div className="card-content">
+          <div className="ui card">
+          <div className="image">
+          <img 
+            src={`http://openweathermap.org/img/w/${weather.weather?.[0].icon}.png`} 
+            alt="weatherimage"
+          />
+          </div>
+          <div className="content">
+          <div className="header">{weather.name}</div>
+          <div className="description">
+            <p className="weather-description">{`The actual tempeture is ${weather.main?.temp}F`}</p>{" "}
+            <p className="weather-description">{`Feels like ${weather.main?.feels_like}F`}</p>{" "}
+            <p className="weather-description">{`${weather.weather[0].description}`}</p>
+            <p className="weather-description">
+              {weather.weather[0].main}
+            </p>
+          </div>
+          </div>
+          </div>
           </div>
         ) : null}
       </div>

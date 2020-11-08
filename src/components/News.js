@@ -1,35 +1,38 @@
 import React from "react";
-import "../News.css";
-
-// Bootstrap
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container'
-import Image from 'react-bootstrap/Image'
+import { Link } from "react-router-dom";
+import 'semantic-ui-css/semantic.min.css'
 
 
 function News(props) {
-  console.log(props);
+  
   let freshNews = props.news.map((news) => {
-    // console.log(news.title)
-    return (
-      <Container style={{marginBottom: ' 40px'}}>
-        <Card style={{ width: "35rem", margin: 'auto' }}>
-          <Card.Img variant="top" src={news.multimedia[0].url} />
-          <Card.Body>
-            <Card.Title className="halfBody"><h3><strong>{news.title}</strong></h3></Card.Title>
-            <Card.Text>{news.abstract}</Card.Text>
-            <Card.Text>{news.geo_facet[0]}</Card.Text>
-            <Card.Text>{news.item_type}</Card.Text>
-            <Card.Text>{news.byline}</Card.Text>
-            <Card.Link href={news.short_url}>Read whole article</Card.Link>
-          </Card.Body>
-        </Card>
-      </Container>
+    console.log(news)
+    return ( 
+      
+      <div class="ui items">
+        <div class="item">
+        <div class="ui medium image">
+          <img src={news.multimedia[0].url} alt=""/>
+        </div>
+        
+        <div class="content">
+          <Link to={news.url} class="header">{news.title}</Link>
+        <div class="description">{news.abstract}</div>
+        <div class="description">{news.byline}</div>
+        <div class="extra">
+          <Link to={news.url} target="_blank">
+            Read whole article
+          </Link>
+        </div>
+        </div>
+        </div>
+      </div>
     );
   });
+
   return (
-    <div>
-    <Image className="newNY" src="./img/nytimess.png" fluid />
+    <div className="ui container">
+    <img src="./img/nytimess.png" class="ui medium centered image" alt="header news title"/>
       {freshNews}
     </div>
   );

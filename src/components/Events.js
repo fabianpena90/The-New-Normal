@@ -1,13 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import '../Events.css'
-
-// Bootstrap
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import Image from 'react-bootstrap/Image'
-import Container from 'react-bootstrap/Container'
-
+import { Link } from 'react-router-dom'
 
 
 function Restaurants() {
@@ -27,35 +20,42 @@ function Restaurants() {
    return events.map((eachEvent) => {
     // let uniqueEvents = [...new Set(events)];
       return (
-        <Container style={{marginBottom: ' 40px'}}>
-          <Card border="light" style={{ width: "40rem", margin: "auto"}}>
-              <Card.Img variant="top" src={eachEvent.images[1].url} />
-              <Card.Body>
-                <Card.Title className="halfBody"><strong>{eachEvent.name}</strong></Card.Title>
-                <Card.Text>
-                <h6>Price Range</h6>
-                ${eachEvent.priceRanges?.[0]?.min} - 
-                ${eachEvent.priceRanges?.[0]?.max}
-                </Card.Text> 
-                <Card.Text>
-                <h5>Location: {eachEvent._embedded.venues[0].name}</h5>
-                {eachEvent._embedded.venues[0].address.line1}
-                </Card.Text>
-                <Button href={eachEvent.url} variant="success" type="submit">Buy Tickets</Button>
-                <Card.Text></Card.Text>
-              </Card.Body>
-          </Card>
-        </Container>
+
+        <div class="ui relaxed items">
+        <div class="item">
+        <div class="image">
+          <img src={eachEvent.images[1].url} alt="events"/>
+        </div>
+        <div class="content">
+          <Link to={eachEvent.url} class="header">{eachEvent.name}</Link>
+        <div class="meta"><span class="cinema">IFC</span></div>
+        <div class="description">
+        <h4 className="ui header">Price Range</h4>
+          ${eachEvent.priceRanges?.[0]?.min} - 
+          ${eachEvent.priceRanges?.[0]?.max}
+        </div>
+        <div class="description">
+          <h5 className="ui header">Location: {eachEvent._embedded.venues[0].name}</h5>
+          {eachEvent._embedded.venues[0].address.line1}
+        </div>
+        <div class="extra">
+          <button class="ui secondary right floated button">
+            <Link to={eachEvent.url} target="_blank">
+              Buy Tickets
+            </Link><i aria-hidden="true" class="right chevron icon"></i>
+          </button>
+        </div>
+        </div>
+        </div>
+        </div>
       )
     })
   }
 
   
   return (
-    <div>
-    <Image className="newNY" src="./img/ticketmasterLogo.png" fluid />
-      {/* <img className="ticket" src="./img/ticketmasterLogo.png" alt="title"/> */}
-      {/* <h2 className="eventsHeader">Events</h2> */}
+    <div className=" ui container" fluid>
+      <img clasclass="ui medium centered image" src="./img/ticketmasterLogo.png" alt="Ticketmaster" fluid />
       {showEvents()}
     </div>
   );

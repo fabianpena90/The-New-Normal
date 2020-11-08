@@ -21,28 +21,28 @@ function Restaurants() {
     // let uniqueEvents = [...new Set(events)];
       return (
 
-        <div class="ui relaxed items">
-        <div class="item">
-        <div class="image">
+        <div className="ui relaxed items">
+        <div className="item">
+        <div className="ui medium image">
           <img src={eachEvent.images[1].url} alt="events"/>
         </div>
-        <div class="content">
-          <Link to={eachEvent.url} class="header">{eachEvent.name}</Link>
-        <div class="meta"><span class="cinema">IFC</span></div>
-        <div class="description">
+        <div className="content">
+          <Link to={eachEvent.url} className="header">{eachEvent.name}</Link>
+        <div className="meta"><span className="cinema">IFC</span></div>
+        <div className="description">
         <h4 className="ui header">Price Range</h4>
           ${eachEvent.priceRanges?.[0]?.min} - 
           ${eachEvent.priceRanges?.[0]?.max}
         </div>
-        <div class="description">
+        <div className="description">
           <h5 className="ui header">Location: {eachEvent._embedded.venues[0].name}</h5>
           {eachEvent._embedded.venues[0].address.line1}
         </div>
-        <div class="extra">
-          <button class="ui secondary right floated button">
+        <div className="extra">
+          <button className="ui secondary right floated button">
             <Link to={eachEvent.url} target="_blank">
               Buy Tickets
-            </Link><i aria-hidden="true" class="right chevron icon"></i>
+            </Link><i aria-hidden="true" className="right chevron icon"></i>
           </button>
         </div>
         </div>
@@ -55,7 +55,7 @@ function Restaurants() {
   
   return (
     <div className=" ui container" fluid>
-      <img clasclass="ui medium centered image" src="./img/ticketmasterLogo.png" alt="Ticketmaster" fluid />
+      <img className="ui medium centered image" src="./img/ticketmasterLogo.png" alt="Ticketmaster" />
       {showEvents()}
     </div>
   );

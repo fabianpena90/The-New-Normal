@@ -27,7 +27,7 @@ function Recipes() {
 
   return (
     <div className=" ui container">
-    <img className="ui image" src="./img/recipesLogo.png" alt="title" />
+    <img className="ui medium centered image" src="./img/recipesLogo.png" alt="title" />
     <div class="ui fluid large action input">
     <input 
       type="text" 
@@ -66,23 +66,3 @@ function Recipes() {
 }
 
 export default Recipes;
-// <ul>
-//               <div className="foodresults">
-//                 <Card style={{ width: "18rem" }}>
-//                   <Card.Img variant="top" src={recipe.recipe.image} />
-//                   <Card.Body>
-//                     <div className="cardbody">
-//                       <Card.Title><p className="recipesTitle">{recipe.recipe.label}</p></Card.Title>
-//                       <Card.Text >
-//                         <p className="recipesText">Calories:{recipe.recipe.calories.toFixed(0)}</p>
-//                       </Card.Text>
-//                       <Button variant="primary">
-//                         <a href={recipe.recipe.url} className="linktext" target="_blank">
-//                           Full recipe
-//                         </a>
-//                       </Button>
-//                     </div>
-//                   </Card.Body>
-//                 </Card>
-//               </div>
-//             </ul>

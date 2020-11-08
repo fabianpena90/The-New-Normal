@@ -37,7 +37,7 @@ function Quotes() {
       <div class="ui compact message">
       <div class="header">{author}</div>
       <blockquote>
-      <p>{quote}</p>
+      <q>{quote}</q>
       </blockquote>
       </div>
     </div>

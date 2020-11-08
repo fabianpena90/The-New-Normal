@@ -11,6 +11,7 @@ import Flights from "./components/Flights";
 import Recipes from "./components/Recipes";
 import Quotes from "./components/Quotes";
 import Covid from "./components/Covid";
+// import Footer from "./components/Footer";
 
 function App() {
   let [news, setNews] = useState([]);
@@ -27,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className=" ui container">
     <Navbar />
       <Switch>
         <Route exact path="/" render={(props) => <Quotes />}></Route>
@@ -61,6 +62,7 @@ function App() {
           render={(props) => <Covid {...props} />}
         ></Route>
       </Switch>
+      {/* <Footer /> */}
     </div>   
   );
 }

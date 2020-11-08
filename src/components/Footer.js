@@ -1,21 +1,24 @@
 import React from "react";
-import "../App.css";
+import './Footer.css'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 
 
 function Footer(props) {
   return (
-    <div className="footer">
+    <div className="ui container">
+    <footer className="footer">
       <strong>&copy; Copyrights</strong> The New Normal - 2020 by Fabian Pena{" "}
-      <a href="https://github.com/fabianpena90" target="_blank">
+      <Link to="https://github.com/fabianpena90" target="_blank">
         <FontAwesomeIcon className="logos" icon={faGithub} size="2x" />
-      </a>{" "}
+      </Link>{" "}
       & Matt Angel{" "}
-      <a href="https://github.com/mattangelmia" target="_blank">
+      <Link to="https://github.com/mattangelmia" target="_blank">
         {" "}
         <FontAwesomeIcon className="logos" icon={faGithub} size="2x" />
-      </a>
+      </Link>
+    </footer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../Weather.css"
+import "./Weather.css"
 
 
 function Weather(props) {
@@ -38,7 +38,7 @@ function Weather(props) {
       <div>
         {toggle ? (
           <div className="card-content">
-          <div className="ui card">
+          <div className="ui centered card">
           <div className="image">
           <img 
             src={`http://openweathermap.org/img/w/${weather.weather?.[0].icon}.png`} 

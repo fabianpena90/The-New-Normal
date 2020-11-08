@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../Recipes.css";
-import InputGroup from "react-bootstrap/InputGroup";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Image from 'react-bootstrap/Image'
+import { Link } from "react-router-dom";
 
 
 function Recipes() {
@@ -27,58 +21,44 @@ function Recipes() {
     setQuery(e.target.value);
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const handleClick = (e) => {
     getData();
   };
 
   return (
-    <div>
-    <Image style={{width: '500px'}} className="newNY" src="./img/recipesLogo.png" fluid />
-      <div className="food">
-        <Form onSubmit={onSubmit}>
-          <InputGroup size="md">
-            <InputGroup.Prepend>
-              <InputGroup.Text id="inputGroup-sizing-lg">
-                Enter Food:{" "}
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              onChange={onType}
-              value={query}
-              className="weatherInput"
-              aria-label="Medium"
-              aria-describedby="inputGroup-sizing-sm"
-              required="true"
-              placeholder="Enter your favorite food type"
-            />
-             <Button variant="info" type="submit">Search</Button>
-          </InputGroup>
-        </Form>
-      </div>
-      <div>
+    <div className=" ui container">
+    <img className="ui medium centered image" src="./img/recipesLogo.png" alt="title" />
+    <div class="ui fluid large action input">
+    <input 
+      type="text" 
+      placeholder="Search your recipe..."
+      onChange={onType}
+      value={query}
+      />
+    <button onClick={handleClick} className="ui button">Search</button>
+    </div>
+      <div className="ui container">
         {recipes !== [] &&
           recipes.map((recipe) => (
-            <ul>
-              <div className="foodresults">
-                <Card style={{ width: "18rem" }}>
-                  <Card.Img variant="top" src={recipe.recipe.image} />
-                  <Card.Body>
-                    <div className="cardbody">
-                      <Card.Title><p className="recipesTitle">{recipe.recipe.label}</p></Card.Title>
-                      <Card.Text >
-                        <p className="recipesText">Calories:{recipe.recipe.calories.toFixed(0)}</p>
-                      </Card.Text>
-                      <Button variant="primary">
-                        <a href={recipe.recipe.url} className="linktext" target="_blank">
-                          Full recipe
-                        </a>
-                      </Button>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            </ul>
+            <div className="ui doubling stackable centered three cards">
+            <div className="ui card">
+            <img src={recipe.recipe.image} className="ui image" alt="img"/>
+            <div className="content">
+            <div className="header">{recipe.recipe.label}</div>
+            <div className="description">Calories: {recipe.recipe.calories.toFixed(0)}</div>
+            </div>
+            <div className="extra content">
+            <button className="ui primary button">
+            <Link to={recipe.recipe.url} target="_blank">
+              Full recipe
+            </Link>
+            </button>
+            </div>
+            </div>
+            </div>
+
+
+            
           ))}
       </div>
     </div>
@@ -86,3 +66,23 @@ function Recipes() {
 }
 
 export default Recipes;
+// <ul>
+//               <div className="foodresults">
+//                 <Card style={{ width: "18rem" }}>
+//                   <Card.Img variant="top" src={recipe.recipe.image} />
+//                   <Card.Body>
+//                     <div className="cardbody">
+//                       <Card.Title><p className="recipesTitle">{recipe.recipe.label}</p></Card.Title>
+//                       <Card.Text >
+//                         <p className="recipesText">Calories:{recipe.recipe.calories.toFixed(0)}</p>
+//                       </Card.Text>
+//                       <Button variant="primary">
+//                         <a href={recipe.recipe.url} className="linktext" target="_blank">
+//                           Full recipe
+//                         </a>
+//                       </Button>
+//                     </div>
+//                   </Card.Body>
+//                 </Card>
+//               </div>
+//             </ul>

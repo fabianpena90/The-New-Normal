@@ -1,20 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../Flights.css";
-import Table from "react-bootstrap/Table";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import { faCloudSun } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faGoogle,
-  faFacebook,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import "./Flights.css";
 
 function Flights(props) {
   const [flights, setFlights] = useState([]);
@@ -35,11 +21,10 @@ function Flights(props) {
         useQueryString: true,
       },
       params: {
-        inboundpartialdate: "2019-12-01",
+        inboundpartialdate: "2020-12-01",
       },
     })
       .then((response) => {
-        console.log(response.data);
         setFlights(response.data);
         setToggle(true);
       })
@@ -54,7 +39,7 @@ function Flights(props) {
       return (
         <div>
           <div className="flighttable">
-            <Table variant="dark" striped bordered hover>
+          <table class="ui celled table">
               <thead>
                 <tr>
                   <th>carrier</th>
@@ -84,7 +69,7 @@ function Flights(props) {
 
                 <tr></tr>
               </tbody>
-            </Table>
+            </table>
           </div>
         </div>
       );
@@ -100,40 +85,21 @@ function Flights(props) {
   }
 
   return (
-    <div>
+    <div className=" ui container">
       <div>
-        <img className="newNY" src="./img/skyscanner.png" alt="title" />
-        <h2 className="flightheader">Book a Flight</h2>
-        {/* <FontAwesomeIcon
-          className="flighticon"
-          icon={faCloudSun}
-          style={{ color: "black" }}
-          size="2x"
-        /> */}
+        <img className="ui medium centered image" src="./img/skyscanner.png" alt="title" />
+        <h2 className="ui header centered aligned">Book a Flight</h2>
       </div>
-      <div className="flightform">
-        <Form onSubmit={submit}>
-          <Form.Group>
-            <Form.Label>From:</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter city"
-              onChange={getCitya}
-            />
-          </Form.Group>
-
-          <Form.Group>
-            <Form.Label>To:</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter city"
-              onChange={getCityb}
-            />
-          </Form.Group>
-          <Button variant="info" type="submit">
-            Search
-          </Button>
-        </Form>
+      <div className="ui container fluid">
+      <div className="ui labeled input right">
+      <div className="ui label label">From:</div>
+      <input onChange={getCitya} type="text" placeholder="From"/>
+      </div>
+      <div className="ui labeled input">
+      <div className="ui label label">To:</div>
+      <input onChange={getCityb} type="text" placeholder="To"/>
+      </div>
+      <button onSubmit={submit} className="ui button">Search</button>
       </div>
       {toggle ? (
         <div className="flightresults">

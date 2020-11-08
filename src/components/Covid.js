@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import '../Covid.css'
 
 function Covid(props) {
   const [covid, setCovid] = useState([]);

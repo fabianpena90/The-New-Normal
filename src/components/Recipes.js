@@ -27,7 +27,7 @@ function Recipes() {
 
   return (
     <div className=" ui container">
-    <img className="ui medium centered image" src="./img/recipesLogo.png" alt="title" />
+    <img className="ui image" src="./img/recipesLogo.png" alt="title" />
     <div class="ui fluid large action input">
     <input 
       type="text" 

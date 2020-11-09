@@ -11,7 +11,6 @@ import Flights from "./components/Flights";
 import Recipes from "./components/Recipes";
 import Quotes from "./components/Quotes";
 import Covid from "./components/Covid";
-// import Footer from "./components/Footer";
 
 function App() {
   let [news, setNews] = useState([]);
@@ -19,17 +18,17 @@ function App() {
   useEffect(() => {
     async function getNews() {
       let res = await axios.get(
-        "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=YrxSelvAUjEcesUKWBypGGJC4gWF596y"
+        "https://api.nytimes.com/svc/topstories/v2/us.json?api-key=YrxSelvAUjEcesUKWBypGGJC4gWF596y"
       );
-      // console.log(res.data.results);
       setNews(res.data.results);
     }
     getNews();
   }, []);
 
   return (
-    <div className=" ui container">
+    <div className="">
     <Navbar />
+    {/* <img className="ui fluid image" src="./img/bg.jpg" alt=""/> */}
       <Switch>
         <Route exact path="/" render={(props) => <Quotes />}></Route>
         <Route

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 
 function Restaurants() {
@@ -40,9 +40,9 @@ function Restaurants() {
         </div>
         <div className="extra">
           <button className="ui secondary right floated button">
-            <Link to={eachEvent.url} target="_blank">
+            <NavLink to={eachEvent.url} target="_blank">
               Buy Tickets
-            </Link><i aria-hidden="true" className="right chevron icon"></i>
+            </NavLink><i aria-hidden="true" className="right chevron icon"></i>
           </button>
         </div>
         </div>

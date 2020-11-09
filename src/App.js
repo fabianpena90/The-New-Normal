@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar"
 import News from "./components/News";
 import Weather from "./components/Weather";
 import Events from "./components/Events";
-import Flights from "./components/Flights";
+// import Youtube from "./components/Youtube";
 import Recipes from "./components/Recipes";
 import Quotes from "./components/Quotes";
 import Covid from "./components/Covid";
@@ -45,11 +45,11 @@ function App() {
           path="/events"
           render={(props) => <Events {...props} />}
         ></Route>
-        <Route
+        {/* <Route
           exact
-          path="/flight"
-          render={(props) => <Flights {...props} />}
-        ></Route>
+          path="/youtube"
+          render={(props) => <Youtube  />}
+        ></Route> */}
         <Route
           exact
           path="/recipes"

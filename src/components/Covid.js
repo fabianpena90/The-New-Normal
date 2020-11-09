@@ -7,7 +7,6 @@ function Covid(props) {
   useEffect(() => {
     async function getCovid() {
       let res = await axios.get(`https://api.covidtracking.com/v1/states/current.json`);
-      console.log(res.data)
       setCovid(res.data)
 
     }
@@ -17,11 +16,11 @@ function Covid(props) {
   function getDataCovid(){
     return covid.map((eachData) => {
       return (
-        <tr class="">
-          <td class="">{eachData.state}</td>
-          <td class="">{eachData.positive}</td>
-          <td class="">{eachData.negative}</td>
-          <td class="">{eachData.death}</td>
+        <tr className="">
+          <td className="">{eachData.state}</td>
+          <td className="">{eachData.positive}</td>
+          <td className="">{eachData.negative}</td>
+          <td className="">{eachData.death}</td>
         </tr>
       )
     })
@@ -30,33 +29,19 @@ function Covid(props) {
   return (
     <div className="ui container">
       <img className="ui medium centered image" src="./img/COVID19-NP-Logo.png" alt="covid" />
-    <table class="ui unstackable table">
-      <thead class="">
-        <tr class="">
-          <th class="">State</th>
-          <th class="">Positive Cases</th>
-          <th class="">Negative Cases</th>
-          <th class="">Deaths</th>
+    <table className="ui unstackable table">
+      <thead className="">
+        <tr className="">
+          <th className="">State</th>
+          <th className="">Positive Cases</th>
+          <th className="">Negative Cases</th>
+          <th className="">Deaths</th>
         </tr>
       </thead>
-      <tbody class="">
+      <tbody className="">
         {getDataCovid()}
       </tbody>
     </table>
-
-      {/* <Table striped bordered hover size="md">
-          <thead style={{textAlign: 'center'}}>
-            <tr>
-              <th>State</th>
-              <th>Positive Cases</th>
-              <th>Negative Cases</th>
-              <th>Deaths</th>
-            </tr>
-          </thead>
-          <tbody style={{textAlign: 'center'}}>
-            {getDataCovid()}
-          </tbody> */}
-      {/* </Table> */}
     </div>
   );
 }

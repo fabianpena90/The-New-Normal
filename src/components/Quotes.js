@@ -34,8 +34,8 @@ function Quotes() {
     <div className="ui fluid center aligned container quotes">
       <h1 className="ui header huge" >The New Normal Informative</h1>
     
-      <div class="ui compact message">
-      <div class="header">{author}</div>
+      <div className="ui compact message">
+      <div className="header">{author}</div>
       <blockquote>
       <q>{quote}</q>
       </blockquote>

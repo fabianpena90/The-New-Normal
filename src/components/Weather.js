@@ -14,7 +14,6 @@ function Weather(props) {
     let res = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}&icon=04d`
     );
-    // console.log(res.data);
     setWeather(res.data);
     setToggle(true);
   }

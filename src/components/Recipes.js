@@ -13,7 +13,6 @@ function Recipes() {
   const getData = async () => {
     const result = await axios.get(url);
     setRecipes(result.data.hits);
-    console.log(result);
     setQuery("");
   };
 
@@ -28,7 +27,7 @@ function Recipes() {
   return (
     <div className=" ui container">
     <img className="ui medium centered image" src="./img/recipesLogo.png" alt="title" />
-    <div class="ui fluid large action input">
+    <div className="ui fluid large action input">
     <input 
       type="text" 
       placeholder="Search your recipe..."
@@ -56,9 +55,6 @@ function Recipes() {
             </div>
             </div>
             </div>
-
-
-            
           ))}
       </div>
     </div>

@@ -31,17 +31,21 @@ function Quotes() {
   }, []);
 
   return (
-    <div className="ui fluid center aligned container quotes">
-      <h1 className="ui header huge" >The New Normal Informative</h1>
+    <div className="">
     
-      <div className="ui compact message">
-      <div className="header">{author}</div>
+      <img class="ui fluid image" src="/img/bg.jpg" alt="news"/>
+      <div className="box-message">
+      <h1>The New Normal Informative</h1>
+      <div className="box">
+      <h2 className="header">{author}</h2>
       <blockquote>
-      <q>{quote}</q>
+        <q>{quote}</q>
       </blockquote>
+      </div>
       </div>
     </div>
   );
 }
+
 
 export default Quotes;

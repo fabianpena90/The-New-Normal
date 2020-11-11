@@ -1,3 +1,38 @@
-.quotes {
-  padding-top: 20%; 
+q {
+  color: black;
+  font-size: 1.4rem
+}
+
+.ui.fluid.image {
+  position: fixed;
+  background-position: center center/cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.box-message {
+  padding: 400px 0 0 150px
+}
+
+h1{
+  color: white;
+  font-size: 4rem
+}
+
+h2 {
+  color: black;
+}
+
+.box {
+  border: 1px solid black;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: rgb(232, 192, 144, 0.5);
+  opacity: .8;
 }

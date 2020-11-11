@@ -6,12 +6,13 @@ import 'semantic-ui-css/semantic.min.css'
 function News(props) {
   
   let freshNews = props.news.map((news) => {
+    console.log(news)
     return ( 
       
       <div className="ui items">
         <div className="item">
         <div className="ui medium image">
-          <img src={news.multimedia[0].url} alt=""/>
+          <img src={news.multimedia[0].url} alt="media"/>
         </div>
         
         <div className="content">
